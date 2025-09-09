@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoAirways Aviation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .backdrop-blur-lg {
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+    </style>
+
+<!-- Facebook Pixel Code --><script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '682261024257213'); fbq('track', 'PageView');</script><noscript> <img height="1" width="1" src="https://www.facebook.com/tr?id=682261024257213&ev=PageView&noscript=1"/></noscript><!-- End Facebook Pixel Code -->
+
+</head>
+<body>
+    <div 
+        class="h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center"
+        style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/airwaysfrance.webp');"
+    >
+        <div class="w-full px-4 flex flex-col h-full justify-center">
+            <div class="text-center mb-8">
+                <div class="flex justify-center items-center mb-10">
+                    <img src="/images/franceesmalogo.svg" alt="InfoAirways Aviation Logo" class="w-60 md:w-80 h-auto" />
+                </div>
+                <h1 class="text-3xl md:text-5xl font-bold text-white mb-2">
+                    Airways Aviation
+                </h1>
+                <p class="text-lg text-gray-200">
+                    Choose your preferred language • Choisissez votre langue
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3 md:gap-6 max-w-2xl mx-auto w-full px-3">
+                <button
+                    onclick="handleLanguageSelect('en')"
+                    class="bg-white bg-opacity-10 hover:bg-opacity-20 backdrop-blur-lg border-2 border-white border-opacity-20 rounded-xl p-4 md:p-8 transition-all duration-300 group"
+                >
+                    <h2 class="text-xl md:text-3xl font-bold text-white mb-1 md:mb-2">English</h2>
+                    <p class="text-sm md:text-base text-gray-200 group-hover:text-white transition-colors">
+                        Continue in English
+                    </p>
+                </button>
+
+                <button
+                    onclick="handleLanguageSelect('fr')"
+                    class="bg-white bg-opacity-10 hover:bg-opacity-20 backdrop-blur-lg border-2 border-white border-opacity-20 rounded-xl p-4 md:p-8 transition-all duration-300 group"
+                >
+                    <h2 class="text-xl md:text-3xl font-bold text-white mb-1 md:mb-2">Français</h2>
+                    <p class="text-sm md:text-base text-gray-200 group-hover:text-white transition-colors">
+                        Continuer en français
+                    </p>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handleLanguageSelect(lang) {
+            const urls = {
+                'en': 'https://www.infoairwaysaviation.com/FREN',
+                'fr': 'https://www.infoairwaysaviation.com/FRFR'
+            };
+            window.location.href = urls[lang];
+        }
+    </script>
+</body>
+</html>
